@@ -1,0 +1,372 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* variables de couleurs */
+:root{
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 5%;
+    background-color: transparent;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.header span{
+    font-size: 1.5rem;
+    width: 30px;
+    display: flex;
+    height: 30px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    top: -20px;
+    right: -265px;
+}
+
+.logo{
+    font-size: 4.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.navbar a{
+    font-size: 2.3rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-left: 5rem;
+    transition-duration: 0.3s;
+}
+
+.navbar a:hover, 
+.navbar a.accueil{
+    color: #00abf0;
+}
+
+.title_article{
+    display: flex;
+    align-items: center;
+    min-height: 50rem;
+    justify-content: center;
+    font-size: 3.5rem;
+    margin-top: -100px;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+section h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+section p{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    transition: transform .5s;
+    margin-top: -100px;
+}
+
+section .article{
+    background-color: var(--second-bg-color);
+    padding: 20px;
+    border-radius: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/* Gestion taille d'image : */
+
+.image_01{
+    width: 300px;
+    height: 210px;
+    border-radius: 20px;
+}
+
+.image_02{
+    width: 300px;
+    height: 210px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_03{
+    width: 300px;
+    height: 210px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_04{
+    width: 300px;
+    height: 210px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_05{
+    width: 300px;
+    height: 210px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_06{
+    width: 300px;
+    height: 210px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addCart{
+    background-color: var(--main-color);
+    color: #eee;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cartTab{
+    width: 100%;
+    background-color: var(--second-bg-color);
+    position: fixed;
+    display: grid;
+    inset: 0 -1920px 0 auto;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+
+body.showCart .cartTab{
+    inset: 0 0 0 auto;
+}
+
+body.showCart .home{
+    transform: translateX(-250px);
+}
+
+.cartTab h1{
+    display: flex;
+    padding: 190px 0px 0px 5%;
+    font-weight: 500;
+    font-size: 3.5rem;
+}
+
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cartTab button{
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    font-weight: 500;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.cartTab .btn .close{
+    background-color: var(--bg-color);
+}
+
+.cartTab .listCart{
+    margin: 200px 0px 0px 5%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: 20px;
+}
+
+.cartTab .listCart .article{
+    display: flex;
+    gap: 70px;
+    text-align: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.listCart .quantity span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.listCart .quantity{
+    display: flex;
+}
+
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: white;
+}
+
+.listCart .article_1:nth-child(even){
+    background-color: var(--second-bg-color);
+}
+
+footer {
+    padding-top: 50px;
+}
+
+.oneItemPage{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bigimage{
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 20px;
+}
+
+.bigarticle{
+    font-size: 1.8rem;
+}
+
+.bigarticle i{
+    font-size: 3rem;
+    padding-bottom: 30px;
+    cursor: pointer;
+}
+
+.search_bar{
+    width: 100%;
+    max-width: 700px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+}
+
+.search_bar input{
+    background-color: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 10px 20px;
+    font-size-adjust: 20px;
+    font-size: 20px;
+    color: black
+}
+
+.clientInformation{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    transition: .3s;
+}
+
+.clientInformation h1{
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+.containeur{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containeur p{
+    padding-top: 50px;
+    font-size: 2em;
+}
+
+.finish_btn{
+    background-color: var(--main-color);
+    color: #eee;
+    padding: 5px 20px;
+    border-radius: 20px;
+    margin-top: 50px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+.clientInformation i{
+    font-size: 5em;
+    display: flex;
+    justify-content: right;
+    padding-top: 30px;
+    padding-right: 50px;
+    cursor: pointer;
+}
