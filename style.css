@@ -116,6 +116,8 @@ section .article{
     border-radius: 20px;
     margin-right: 20px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Gestion taille d'image : */
@@ -368,4 +370,10 @@ footer {
     padding-top: 30px;
     padding-right: 50px;
     cursor: pointer;
+}
+
+.article i{
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: var(--text-color);
 }

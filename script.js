@@ -179,8 +179,8 @@ const changeQuantity = (product_id, type) => {
 //Newpage
 listProductHTML.addEventListener('click', (event) => {
     let positionClick = event.target;
-    if (positionClick.classList.contains('article')){
-        let product_id = positionClick.dataset.id;
+    if (positionClick.classList.contains('fa-circle-info')){
+        let product_id = positionClick.parentElement.dataset.id;
         newPage(product_id);
     }
 })
